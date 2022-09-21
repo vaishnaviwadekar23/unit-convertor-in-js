@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vaishnavi</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+     <center><h1 id="heading" style="color: blue;">Unit Convertor</h1></center>
+     <div id="container">
+     	<div class="input-div">
+     		<label>Feet</label><br>
+     		<input type="number" value="0" id="feet" class="inpt">
+     	</div>
+       
+         <div class="input-div">
+         	<h1>=</h1>
+          </div>
+
+     	<div class="input-div">
+     		<label>Inches</label><br>
+     		<input type="number" value="0" id="inch" class="inpt">
+     	</div>
+     </div>
+     <div id="container">
+          <div class="input-div">
+               <label>Meter</label><br>
+               <input type="number" value="0" id="meter" class="inpt">
+          </div>
+       
+         <div class="input-div">
+          <h1>=</h1>
+          </div>
+
+          <div class="input-div">
+               <label>Centimeter</label><br>
+               <input type="text" value="0" id="centimeter" class="inpt">
+
+          </div>
+     </div>
+     <script>
+     	var feet1=document.getElementById('feet');
+     	var inch1=document.getElementById('inch');
+
+     	feet1.addEventListener('input',function(){
+     		let f=this.value;
+     		let i=f*12;
+     		inch1.value=i;
+     		// console.log('changed');
+     	});
+
+
+     	inch1.addEventListener('input',function(){
+     		let i=this.value;
+     		let f=i/12;
+     		feet1.value=f;
+     	});
+
+          var meter1=document.getElementById('meter');
+          var centimeter1=document.getElementById('centimeter');
+
+          meter1.addEventListener('input',function(){
+               let f=this.value;
+               let i=f*100;
+               centimeter1.value=i;
+               // console.log('changed');
+          });
+
+
+          inch1.addEventListener('input',function(){
+               let i=this.value;
+               let f=i/100;
+          meter1.value=f;
+          });
+
+     </script>
+</body>
+</html>
